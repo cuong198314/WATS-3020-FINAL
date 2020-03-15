@@ -326,6 +326,10 @@ class TicTacToe {
         this.initializeMovePrompt();
         console.log('initialize move prompt');
 
+        function showStuff(startoverButton) {
+            document.getElementById(id).style.display = 'block';
+        }
+
        
     }
     startover() {
