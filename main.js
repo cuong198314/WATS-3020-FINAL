@@ -30,6 +30,8 @@ class TicTacToe {
         this.moveCount = 0
         
         this.startPrompt = document.querySelector('#start-prompt');
+
+        this.startoverPrompt = document.querySelector('#startover-prompt');
         
         this.movePrompt = document.querySelector('#move-prompt');
         
@@ -307,6 +309,10 @@ class TicTacToe {
         this.currentPlayer = this.player1;
         
         this.currentPlayerToken.setAttribute('class', `fas fa-${this.currentPlayer.token}`);
+
+        this.startoverPrompt.setAttribute('class', '');
+
+     
     }
     start() {
         console.log('start game');
@@ -319,8 +325,21 @@ class TicTacToe {
         
         this.initializeMovePrompt();
         console.log('initialize move prompt');
+
+       
     }
-} // End of the Tic Tac Toe Class definition.
+    startover() {
+        console.log(startoverButton);
+        
+        this.setUpBoard();
+        console.log('set up board');
+        
+        this.initializeMovePrompt();
+        console.log('initialize move prompt');
+    }
+} 
+
+// End of the Tic Tac Toe Class definition.
 
 // Outside of the Class definitions, we need a few items to control the game
 // so our players can successfull play.
@@ -331,12 +350,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 let startButton = document.querySelector('#start-button');
 
+
 startButton.addEventListener('click',(event)=>{
     
     game = new TicTacToe();
     
     game.start();
 });
+let startoverButton = document.getElementById("start-over");
+console.log('start game');
+
+startoverButton.addEventListener('click',(event)=>{
+    
+    
+    game.start();
+});
+
 // NOTE: End of the `startButton` event listener here.
 });
 // NOTE: End of the "DOMContentLoaded" event listener here.

@@ -104,3 +104,7 @@ html {
 .spanish-gray-bg {
     background-color: rgba(150, 154, 151, 1);
 }
+
+.b {
+    display: none;
+}
