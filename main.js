@@ -361,10 +361,11 @@ startButton.addEventListener('click',(event)=>{
     
     game.start();
 });
-let startoverButton = document.getElementById("start-over");
+let startoverButton = document.querySelector('#start-over');
 console.log('start game');
 
 startoverButton.addEventListener('click',(event)=>{
+    game = new TicTacToe();
     
     
     game.start();
